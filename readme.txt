@@ -10,10 +10,8 @@ Integration of "Ultimate Member" + "WP User Fronted" in user profiles
 
 == Description ==
 The plugin was integrat "Ultimate Member" with "WP User Fronted".
-
-It's add in user profile additional pages to add posts and list of posts (with edit options).
-
-We can select in what roles show additional pages.
+It's add in user profile additional pages to "add posts" and "list of posts" (with edit link).
+We can select in what roles we want show additional pages.
 
 == Installation ==
 
