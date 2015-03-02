@@ -27,7 +27,7 @@ You can select what roles you want to show the additional pages to.
 4. Settings in admin panel
 
 == Changelog ==
-= 1.1.2 =
+= 1.1.3 =
 - Bugs repair
 
 = 1.1.2 =
