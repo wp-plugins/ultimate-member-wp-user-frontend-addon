@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
  * Plugin Name: Ultimate Member + WP User Frontend - Addon
  * Plugin URI: http://devwp.pl/ultimate-member-wp-user-frontend-addon/
  * Description: Integration of "Ultimate Member" + "WP User Fronted" in user profiles
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: DevWP
  * Author URI: http://devwp.pl
  * Text Domain: ufa
