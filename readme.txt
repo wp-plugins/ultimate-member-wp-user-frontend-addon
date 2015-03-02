@@ -1,4 +1,4 @@
-=== Ultimate Member + WP User Frontend - Addon ===
+﻿=== Ultimate Member + WP User Frontend - Addon ===
 Contributors: trasek
 Tags: ultimate member, wp user frontend, ultimate member addon
 Requires at least: 4.1
@@ -19,10 +19,17 @@ You can select what roles you want to show the additional pages to.
 3. Configure edit page for WP User Fronted
 4. Install our plugin and select roles where we want to display additional pages in profile.
 
+== Screenshots ==
+
+1. User with tabs
+2. "My posts" tab
+3. "Add post" tab
+4. Settings in admin panel
+
 == Changelog ==
-1.1.0
+= 1.1.0 =
 - add Language support
 - add options to edit slug
 
-1.0.0
+= 1.0.0 =
 Initial release
