@@ -3,7 +3,6 @@ Contributors: trasek
 Tags: ultimate member, wp user frontend, ultimate member addon
 Requires at least: 4.1
 Tested up to: 4.1.1
-Stable tag: 1.0.0
 License: GPLv2
 
 Integration of "Ultimate Member" + "WP User Fronted" in user profiles
