@@ -1,9 +1,9 @@
-﻿=== Ultimate Member + WP User Frontend - Addon ===
+=== Ultimate Member + WP User Frontend - Addon ===
 Contributors: trasek
 Tags: ultimate member, wp user frontend, ultimate member addon
 Requires at least: 4.1
 Tested up to: 4.1.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv2
 
 Integration of "Ultimate Member" + "WP User Fronted" in user profiles
@@ -27,6 +27,9 @@ You can select what roles you want to show the additional pages to.
 4. Settings in admin panel
 
 == Changelog ==
+= 1.1.2 =
+- Check if ultimate member it's active (wp-admin blank page)
+
 = 1.1.1 =
 - small bug repair
 
