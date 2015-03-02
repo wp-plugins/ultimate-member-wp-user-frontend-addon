@@ -43,10 +43,24 @@ class UAF_Settings {
                     array(
                         'name' => 'roles',
                         'label' => __( 'Roles', 'ufa' ),
-                        'desc' => __( 'In waht roles want to show add posts box.', 'ufa' ),
+                        'desc' => __( 'In what roles want to show additional boxes.', 'ufa' ),
                         'type' => 'multicheck',
                         'options' => $ultimatemember->query->get_roles(),
-                    )
+                    ),
+                    array(
+                        'name' => 'slug_add',
+                        'label' => __( 'Slug ADD', 'ufa' ),
+                        'desc' => __( 'Slug in URL for Add post', 'ufa' ),
+                        'type' => 'text',
+                        'default' => 'add-post'
+                    ), 
+                    array(
+                        'name' => 'slug_view',
+                        'label' => __( 'Slug VIEW', 'ufa' ),
+                        'desc' => __( 'Slug in URL for My posts', 'ufa' ),
+                        'type' => 'text',
+                        'default' => 'my-posts'
+                    )                                         
                 )
             );
             return $fields;
