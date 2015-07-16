@@ -60,7 +60,14 @@ class UAF_Settings {
                         'desc' => __( 'Slug in URL for My posts', 'ufa' ),
                         'type' => 'text',
                         'default' => 'my-posts'
-                    )                                         
+                    ),
+                    array(
+                        'name' => 'id_form',
+                        'label' => __( 'Form ID', 'ufa' ),
+                        'desc' => __( 'Form ID from WP User Frontend Plugin', 'ufa' ),
+                        'type' => 'text',
+                        'default' => ''
+                    )                                                              
                 )
             );
             return $fields;

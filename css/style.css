@@ -1,5 +1,5 @@
 /* CSS Document */
-.wpuf-button, .wpuf-post-form input[type=submit]{
+.wpuf-button, ul.wpuf-form .wpuf-submit input[type=submit], ul.wpuf-form li .wpuf-fields a.file-selector, ul.wpuf-form li .wpuf-fields #wpuf-insert-image-container a#wpuf-insert-image{
   vertical-align: middle!important;
   height: auto!important;
   font-size: 15px;
@@ -11,7 +11,7 @@
   margin: 0;
   opacity: 1;
   background: #3ba1da !important;
-  color:#fff;
+  color:#fff !important;
   border: none!important;
   display: inline-block;
   line-height: 1em!important;
@@ -30,10 +30,13 @@
   border-top: 1px solid rgba(0,0,0,0)!important;
   border-bottom: 2px solid rgba(0,0,0,.1)!important;
 }
-.wpuf-button:hover, .wpuf-post-form input[type=submit]:hover{
+.wpuf-button:hover, ul.wpuf-form .wpuf-submit input[type=submit]:hover, ul.wpuf-form li .wpuf-fields a.file-selector:hover, ul.wpuf-form li .wpuf-fields #wpuf-insert-image-container a#wpuf-insert-image:hover{
   background-color: #44b0ec !important;
   color:#fff;
 }
 .wpuf-post-form label{
   font-size:14px;
 }
+.um-item-thumbnail-special,.um-titles{display:inline-block;vertical-align:middle;}
+.um-titles{margin-left: 30px;}
+.um-item-thumbnail-special{  border: 1px solid #ddd; padding: 8px; border-radius: 3px;}

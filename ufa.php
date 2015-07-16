@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
  * Plugin Name: Ultimate Member + WP User Frontend - Addon
  * Plugin URI: http://devwp.pl/ultimate-member-wp-user-frontend-addon/
  * Description: Integration of "Ultimate Member" + "WP User Fronted" in user profiles
- * Version: 1.1.3
+ * Version: 1.2
  * Author: DevWP
  * Author URI: http://devwp.pl
  * Text Domain: ufa
@@ -19,7 +19,7 @@ if(is_plugin_active('ultimate-member/index.php')){
   require_once 'actions.php';
 }
     function scripts(){
-    	    wp_enqueue_style( 'style-ufa', plugins_url('css/style.css', __FILE__) ); 
+    	    wp_enqueue_style( 'style-ufa', plugins_url('css/style.css', __FILE__), array('wpuf-css') ); 
     }
     add_action('wp_enqueue_scripts','scripts');
     

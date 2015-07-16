@@ -2,8 +2,8 @@
 Contributors: trasek
 Tags: ultimate member, wp user frontend, ultimate member addon
 Requires at least: 4.1
-Tested up to: 4.1.1
-Stable tag: 1.1.3
+Tested up to: 4.2.2
+Stable tag: 1.1.4
 License: GPLv2
 
 Integration of "Ultimate Member" + "WP User Fronted" in user profiles
@@ -27,6 +27,10 @@ You can select what roles you want to show the additional pages to.
 4. Settings in admin panel
 
 == Changelog ==
+= 1.2 =
+Added Russian Language / Thanks Arniarni - Arni
+Bug with integration repair
+
 = 1.1.3 =
 - Bugs repair
 

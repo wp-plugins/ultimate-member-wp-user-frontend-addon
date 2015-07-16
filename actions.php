@@ -7,6 +7,9 @@
       $slugadd = 'add-post';
       $slugview = 'my-posts';
     }
+    if(is_array($roles) && !empty($roles['id_form']) ){
+      $formid = $roles['id_form'];
+    }
     /* Zakładka moje wpisy w profilu */
     add_filter('um_profile_tabs', 'moje_wpisy_tab', 1000 );
     function moje_wpisy_tab( $tabs  ) {
@@ -34,7 +37,12 @@
     }
     add_action('um_profile_content_'.$slugadd.'_default', 'dodaj_wpis_tab_default');
     function dodaj_wpis_tab_default( $args ) {
-      echo do_shortcode('[wpuf_addpost]');
+      global $formid;
+      if(isset($formid)){ 
+        echo do_shortcode('[wpuf_form id="'.$formid.'"]');
+      }else{
+        echo __('Add form ID in Options', 'ufa');
+      }
     }
     if(is_array($roles)){
       add_filter('um_user_profile_tabs', 'disable_user_tab', 1000 );

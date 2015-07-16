@@ -84,7 +84,7 @@ class WPUF_Dashboard_new {
                         ?>
                             <div class="um-item">
                                 <?php if ( 'on' == $featured_img ) { ?>
-                                    <div class="um-item-thumbnail">
+                                    <div class="um-item-thumbnail-special">
                                         <?php
                                         if ( has_post_thumbnail() ) {
                                             the_post_thumbnail( $featured_img_size );
@@ -94,41 +94,44 @@ class WPUF_Dashboard_new {
                                         ?>
                                     </div>
                                 <?php } ?>                            
-                          			<div class="um-item-link">
-                                <?php if ( in_array( $post->post_status, array('draft', 'future', 'pending') ) ) { ?>
-                                  <?php the_title(); ?>
-                                <?php } else { ?>
-                                  <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'wpuf' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-                                <?php } ?>                                
-                                </div>
-                          			<div class="um-item-meta">
-                          				<span><?php wpuf_show_post_status( $post->post_status ) ?></span>
-                                  <?php
-                                  if ( $charging_enabled == 'yes' ) {
-                                      $order_id = get_post_meta( $post->ID, 'wpuf_order_id', true );
-                                      ?>
-                                      <span>
-                                          <?php if ( $post->post_status == 'pending' && $order_id ) { ?>
-                                              <a href="<?php echo trailingslashit( get_permalink( wpuf_get_option( 'payment_page', 'wpuf_payment' ) ) ); ?>?action=wpuf_pay&type=post&post_id=<?php echo $post->ID; ?>">Pay Now</a>
-                                          <?php } ?>
-                                      </span>
-                                  <?php } ?>                         				
-                                  <span>                                
-                                    <?php if ( wpuf_get_option( 'enable_post_edit', 'wpuf_others', 'yes' ) == 'yes' ) { ?>
-                                        <?php
-                                        $edit_page = (int) wpuf_get_option( 'edit_page_id', 'wpuf_others' );
-                                        $url = get_permalink( $edit_page );
-                                        ?>
-                                        <a href="<?php echo wp_nonce_url( $url . '?pid=' . $post->ID, 'wpuf_edit' ); ?>"><?php _e( 'Edit', 'wpuf' ); ?></a>
+                          			<div class="um-titles">
+                                  <div class="um-item-link">
+                                    <i class="um-icon-ios-paper"></i>
+                                    <?php if ( in_array( $post->post_status, array('draft', 'future', 'pending') ) ) { ?>
+                                      <?php the_title(); ?>
                                     <?php } else { ?>
-                                        &nbsp;
-                                    <?php } ?>
-    
-                                    <?php if ( wpuf_get_option( 'enable_post_del', 'wpuf_others', 'yes' ) == 'yes' ) { ?>
-                                        <a href="<?php echo wp_nonce_url( "?action=del&pid=" . $post->ID, 'wpuf_del' ) ?>" onclick="return confirm('Are you sure to delete this post?');"><span style="color: red;"><?php _e( 'Delete', 'wpuf' ); ?></span></a>
-                                    <?php } ?>
-                                  </span>
-                          			</div>
+                                      <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'wpuf' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+                                    <?php } ?>                                
+                                  </div>
+                            			<div class="um-item-meta">
+                            				<span><?php wpuf_show_post_status( $post->post_status ) ?></span>
+                                    <?php
+                                    if ( $charging_enabled == 'yes' ) {
+                                        $order_id = get_post_meta( $post->ID, 'wpuf_order_id', true );
+                                        ?>
+                                        <span>
+                                            <?php if ( $post->post_status == 'pending' && $order_id ) { ?>
+                                                <a href="<?php echo trailingslashit( get_permalink( wpuf_get_option( 'payment_page', 'wpuf_payment' ) ) ); ?>?action=wpuf_pay&type=post&post_id=<?php echo $post->ID; ?>">Pay Now</a>
+                                            <?php } ?>
+                                        </span>
+                                    <?php } ?>                         				
+                                    <span>                                
+                                      <?php if ( wpuf_get_option( 'enable_post_edit', 'wpuf_dashboard', 'yes' ) == 'yes' ) { ?>
+                                          <?php
+                                          $edit_page = (int) wpuf_get_option( 'edit_page_id', 'wpuf_general' );
+                                          $url = get_permalink( $edit_page );
+                                          ?>
+                                          <a href="<?php echo wp_nonce_url( $url . '?pid=' . $post->ID, 'wpuf_edit' ); ?>"><?php _e( 'Edit', 'wpuf' ); ?></a>
+                                      <?php } else { ?>
+                                          &nbsp;
+                                      <?php } ?>
+      
+                                      <?php if ( wpuf_get_option( 'enable_post_del', 'wpuf_others', 'yes' ) == 'yes' ) { ?>
+                                          <a href="<?php echo wp_nonce_url( "?action=del&pid=" . $post->ID, 'wpuf_del' ) ?>" onclick="return confirm('Are you sure to delete this post?');"><span style="color: red;"><?php _e( 'Delete', 'wpuf' ); ?></span></a>
+                                      <?php } ?>
+                                    </span>
+                            			</div>
+                                </div>
                           	</div>
                     <?php } ?>
 
